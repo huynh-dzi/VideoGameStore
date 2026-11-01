@@ -1,8 +1,63 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<section class="py-5 text-center bg-dark text-white rounded-3 mb-5">
+    <div class="container py-4">
+        <h1 class="display-4 fw-bold">Welcome to VideoGameStore</h1>
+        <p class="lead mb-4">
+            Your one-stop shop for PlayStation, Xbox, and Nintendo games.
+        </p>
+        <a class="btn btn-primary btn-lg px-4" asp-controller="Games" asp-action="Index">
+            Browse All Games
+        </a>
+    </div>
+</section>
+
+<section class="mb-5">
+    <h2 class="text-center mb-4">Shop by Platform</h2>
+
+    <div class="row g-4 justify-content-center">
+        <div class="col-12 col-md-4">
+            <div class="card h-100 text-center shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <h3 class="card-title h4">PlayStation</h3>
+                    <p class="card-text">
+                        Explore the latest releases and classics for PlayStation consoles.
+                    </p>
+                    <a class="btn btn-outline-primary mt-auto" asp-controller="Games" asp-action="PlayStation">
+                        View PlayStation Games
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <div class="card h-100 text-center shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <h3 class="card-title h4">Xbox</h3>
+                    <p class="card-text">
+                        Find top titles and exclusives for Xbox consoles.
+                    </p>
+                    <a class="btn btn-outline-success mt-auto" asp-controller="Games" asp-action="Xbox">
+                        View Xbox Games
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <div class="card h-100 text-center shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <h3 class="card-title h4">Nintendo</h3>
+                    <p class="card-text">
+                        Discover family favorites and adventures for Nintendo systems.
+                    </p>
+                    <a class="btn btn-outline-danger mt-auto" asp-controller="Games" asp-action="Nintendo">
+                        View Nintendo Games
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
